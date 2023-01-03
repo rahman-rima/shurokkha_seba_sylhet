@@ -1,0 +1,363 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo {
+    width: 1356x;
+    height: 100px;
+    padding-top: 20px;
+    margin: auto;
+}
+.logo img {
+    width: 150px;
+    height: 100%;
+    margin-left: 600px;
+}
+
+.header {
+    width: 1346px;
+    height: 100px;
+     margin: auto;
+}
+
+
+.headmenu {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.headmenu ul{
+    margin-top: 20px; 
+    margin-left: 40px;
+}
+
+.headmenu ul li {
+    
+    list-style: none;
+    display: inline-block;
+
+}
+.headmenu ul li {
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 45px;
+    padding: 10px 15px;
+     font-family: 'Ropa Sans', sans-serif;
+    color:black;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.headmenu li:hover{
+background-color:lavenderblush;
+}
+
+.About{
+    height: 300px;}
+.About h2{
+    margin-top: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: green;
+}
+.AboutCV{
+    margin-top: 5px;
+    width: 1366x;
+    background-color: lavender;
+}
+.AboutCV p{  
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+.Symptoms{
+    height: 380px;
+}
+.Symptoms h2
+{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    margin-top: 10px;
+}
+.CVSymptoms{
+    background-color: lavender;
+    width: 1366x;
+    margin-top: 20px;
+}
+.CVSymptoms p{
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.Prevention{  
+    width: 1366x;
+    height: 250px;
+    margin-top: 20px;
+}
+.Prevention h2{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    margin-top: 5px;
+}
+.PreventionFor{
+    margin-top: 10px;
+    background-color:lavender;
+}
+.PreventionFor ul{
+    font-size: 25px;
+    margin-left: 50px;
+}
+.DoctorsSection{
+    width: 1366x;
+    height: 420px;
+    margin-top: 10px;
+}
+.DoctorsSection h2{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+}
+.DoctorsL{
+    text-align: right;
+    font-size: 25px;
+    background-color: lavender;
+}
+.DoctorsL ul li{
+    width: 50%;
+    list-style: none;
+}
+.DoctorsR{
+    text-align: left;
+    font-size: 25px;
+    background-color: lavender;
+}
+.DoctorsR ul li{
+    list-style: none;
+    margin-left: 683px;
+}
+.NewsSection{
+    width: 1366x;
+    height: 180px;
+    margin-top: 20px;
+}
+.NewsSection h2{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+}
+.News{
+    background-color: lavender;}
+.News p{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.BookTest{
+    width: 1366x;
+    height: 700px;
+    margin-top: 20px;
+}
+.BookTest h1{
+    text-align: center;
+    font-size: 45px;
+    color: green;
+}
+.Testbooking{
+    background-color: lavender;
+    margin-top: 10px;
+}
+.Testbooking form{
+    margin-left: 295px;
+    text-align: center;
+    font-size: 25px;
+}
+.Vaccination{
+    width: 1366x;
+    height: 270px;
+    margin-top: 20px;
+}
+.Vaccination h2{
+    text-align: center;
+    font-size: 40px;
+    color: green;
+}
+.Vaccination p{
+    background-color: lavender;
+    font-size: 25px;
+    margin-top: 5px;
+    text-align: center;
+}
+.vNation{
+    background-color: white;
+    border: 2px solid black;
+    color: green;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 30px;
+    cursor: pointer;
+}
+.linebreak{
+    width: 1356x;
+    height: 5px;
+    margin-top: 20px;
+    text-align: center;
+    background-color:red;
+}
+.banner {
+    width: 1346px;
+    height: 641px;
+    margin: auto;
+    background-image: url(../Media/banner-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bannertext h1{
+    width: 43%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    background-color: steelblue;
+}
+.bannertext p{
+    width: 43%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background-color:steelblue;
+}
+.photo {
+    width: 900px;
+    height: 400px;
+    border: 5px solid black;
+    margin-left: 200px;
+}
+
+.first {
+    width: 1280px;
+    height: 800px;
+    margin: auto;
+}
+
+.firstdiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+
+.aa{
+    width: 1320px;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+.all {
+    width: 1356px;
+    height: 2300px;
+    margin: auto;
+    border: 2px solid black;
+}
+.blog1 {
+    width: 1320px;
+    height: 400px;
+    margin: auto;
+    padding-top: 50px;
+}
+.blog1 h1 {
+      font-family: 'Ropa Sans', sans-serif;
+    margin-left: 50px;
+}
+
+.blog1 p {
+    width: 700px;
+    height: 200px;
+    font-family: 'Ropa Sans', sans-serif; 
+    font-size: 21px;
+    line-height: 1.4;
+    margin-left: 50px;
+}
+.blog1 button {
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+font-size: 14px;
+    margin-left: 50px;
+}
+
+
+.blog2 {
+    width: 1320px;
+    height: 400px;
+    margin: auto;
+    padding-top: 20px;
+}
+.blog2 h1 {
+      font-family: 'Ropa Sans', sans-serif;
+    margin-left: 650px;
+}
+
+.blog2 p {
+    width: 700px;
+    height: 200px;
+    font-family: 'Ropa Sans', sans-serif; 
+    font-size: 21px;
+    line-height: 1.4;
+    margin-left: 650px;
+}
+.blog2 button {
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+font-size: 14px;
+    margin-left: 650px;
+}
+
+
+
+
+
+
+.footer {
+    width: 1356x;
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: coral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

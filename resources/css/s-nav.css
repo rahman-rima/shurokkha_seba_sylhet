@@ -1,0 +1,30 @@
+
+/*header {
+    padding: 156px 0 100px;
+  }
+  
+  section {
+    padding: 150px 0;
+  }
+
+  nav.navbar.navbar-expand-lg.navbar-light.fixed-top.bg-light {
+} */
+
+.su-h-header .fixed-top {
+    background-color: #f9fbff;
+    justify-content: center;
+    box-shadow: 0 4px 4px hsl(0deg 0% 73% / 25%);
+}
+.fixed-bottom, .fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+   .fixed-top {
+   padding: 0%;
+}
+.fixed-footer{
+  bottom: 0;
+  justify-content: center;
+}
