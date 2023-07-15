@@ -1,4 +1,4 @@
-<html>
+ <html>
     <head>
       <style>
           
@@ -18,6 +18,10 @@ a {
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
+}
+h1{
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -70,10 +74,6 @@ h2 {
 
 
 /* TABS */
-h1{
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
 
 h2.inactive {
   color: #cccccc;
@@ -142,6 +142,26 @@ input[type=email] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
 input[type=password] {
   background-color: #f6f6f6;
   border: none;
@@ -167,12 +187,19 @@ input[type=email]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
 input[type=password]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
 input[type=email]:placeholder {
+  color: #cccccc;
+}
+input[type=text]:placeholder {
   color: #cccccc;
 }
 input[type=password]:placeholder {
@@ -315,28 +342,36 @@ h1{
     <!-- Icon -->
     <div class="fadeIn first">
       <!-- <img src="https://t4.ftcdn.net/jpg/04/37/47/69/360_F_437476995_W4JzNU3EuV7G1fCQodLV2wRcubXzIeke.jpg" id="icon" alt="User Icon" /> -->
-      <h1>সুরক্ষা সেবা সিলেট</h1>
-      <h2>অ্যাডমিন</h2>
+      <h1 >সুরক্ষা সেবা সিলেট</h1>
+      <h2>ব্যবহারকারী</h2>
     </div>
-   <!-- action="{{route('auth.register')}}" method="post" -->
-    @if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-@endif
+   
+    
 
     <!-- Login Form -->
-    <form action="{{url('/admin_dashboard')}}" method="post">
+    <!-- <form action="{{url('/admin_dashboard')}}" method="post"> -->
+    <form action="{{url('login')}}" method="post">
     @csrf
-      <input type="email" id="login" class="fadeIn second" name="email" placeholder="ইমেইল">
+      <input type="email" id="login" class="fadeIn second" name="email" placeholder="ইমেইল" value="{{old('email')}}">
+      <div class="text-danger">
+      @error('email')
+        {{$message}}
+      @enderror
+      </div>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="পাসওয়ার্ড">
+      <div class="text-danger">
+      @error('password')
+        {{$message}}
+      @enderror
+      </div>
       <input type="submit" class="fadeIn fourth" value="প্রবেশ করুন">
     </form>
 
-    <!-- Remind Passowrd -->
+
     <div id="formFooter">
       <a class="underlineHover" href="/">হোম</a>
-      <a class="underlineHover" href="/auth.login">/ ব্যবহারকারী লগইন</a>
+      <a class="underlineHover" href="auth.register">/ নিবন্ধন করুন</a>
+      <a class="underlineHover" href="/admin_login">/ অ্যাডমিন লগইন </a>
     </div>
 
   </div>

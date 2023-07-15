@@ -15,18 +15,18 @@ class CreateFormsTable extends Migration
     {
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
-            $table->string('NID_no');
-            $table->string('names');
-            $table->date('birthdate');
-            $table->string('phoneN');
-            $table->string('mailaddress');
-            $table->string('sex',10);
-            $table->string('BloodG',10);
+            $table->string('NID');
+            $table->string('name');
+            $table->date('date_of_birth');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('gender',10);
+            $table->string('BloodGroup',10);
             $table->string('address');
-            $table->integer('Wardno');
-            $table->string('veksinate',10);
-            $table->string('Vname',30);
-            $table->string('priordiagnosis',10);
+            $table->integer('Ward_no');
+            $table->string('vaccinate',10);
+            $table->string('vaccine_name',30);
+            $table->string('prior_diagnosis',10);
             $table->string('status')-> default('পরীক্ষার তারিখ শীঘ্রই বলা হবে');
             $table->timestamps();
         });

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ফলাফল</title>
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
     <style>
        /* form {
@@ -17,106 +18,9 @@
                 background:rgba(50, 50, 50, 0.2);
                 border:0px solid #dbdbdb;
 } */
-.ss {
-                position:relative;
-                padding:6px 15px;
-                left:-8px;
-                border:2px solid #207cca;
-                background-color:#207cca;
-                color:#fafafa;
-}
-.ss:hover  {
-                background-color:#fafafa;
-                color:#207cca;
-}
-    </style>
-    <style >
-  td {
-    padding: 0 20px;
-  }
-  
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.header {
-    width: 1346px;
-    height: 100px;
-     margin: auto;
-}
-
-
-.headmenu {
-    width: 100%;
-    height: 100%;
-    
-}
-
-.headmenu ul{
-    margin-top: 20px; 
-    margin-left: 40px;
-}
-
-.headmenu ul li {
-    
-    list-style: none;
-    display: inline-block;
-
-}
-.headmenu ul li {
-    text-decoration: none;
-    font-size: 25px;
-    line-height: 45px;
-    padding: 10px 15px;
-     font-family: 'Ropa Sans', sans-serif;
-    color:black;
-    text-transform: uppercase;
-    margin-left: 10px;
-}
-
-.headmenu li:hover{
-background-color:lavenderblush;
-}
-  .AboutCVV{
-    /* margin-top: 5px; */
-    width: 1366x;
-    background-color: lavender;
-}
-.footer {
-    width: 1356x;
-    height: 40px;
-    margin-top: 20px;
-    text-align: center;
-    background-color: coral;
-}
-.linebreak{
-    width: 1356x;
-    height: 5px;
-    margin-top: 20px;
-    text-align: center;
-    background-color:red;
-}
-.About{
-    height: 300px;}
-.About h2{
-    margin-top: 15px;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 40px;
-    color: green;
-}
-.AboutCVV{
-    margin-top: 5px;
-    width: 1366x;
-    background-color: lavender;
-}
-.AboutCVV p{  
-    font-size: 25px;
-    margin-left: 50px;
-    margin-right: 30px;
+.hover-effect:hover {
+        background-color: #0275d8;
+        opacity: 1.0;
 }
 .coll{
     color: red;
@@ -125,34 +29,38 @@ background-color:lavenderblush;
 .kk{
     color: blue;
 }
+
+  td, th{
+    padding: 0 20px;
+  }
 </style>
 
 </head>
 <body>
-<section class="header">
+<section class="navbar navbar-expand-lg mx-3 ps-5 h3 mt-2 " style="background-color: #e3f2fd;">
        
-       <div class="headmenu">
+       <div >
            
-       <ul>
-                    <li><i class="fa fa-home" aria-hidden="true"></i> <a href="http://127.0.0.1:8000/"> হোম </a></li>
-                    <li><a href="http://127.0.0.1:8000/#About"> সম্পর্কিত </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Symptoms"> উপসর্গ </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Prevention"> প্রতিরোধ </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Doctors"> ডাক্তার </a></li>
-                    <li><a href="http://127.0.0.1:8000/#News"> খবর </a></li>
-                    <li><a href="forms.test"> টেস্ট বুকিং  </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Vaccination"> ভ্যাকসিন </a></li>
-                    <li><a href="forms.result"> ফলাফল </a></li>
-                    <li><a href="admin_login"> অ্যাডমিন </a></li>                      
-                </ul>                      
+           <ul class="navbar-nav ">
+               <li class="nav-item"><a href="/" class="nav-link hover-effect"><i class="fa fa-home" aria-hidden="true">  হোম</i> </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> সম্পর্কিত </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> উপসর্গ </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> প্রতিরোধ </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> ডাক্তার </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> খবর </a></li>
+               <li class="nav-item ps-3"><a href="forms.test" class="nav-link hover-effect"> টেস্ট বুকিং </a></li>
+               <li class="nav-item ps-3"><a href="/" class="nav-link hover-effect"> ভ্যাকসিন </a></li>
+               <li class="nav-item ps-3"><a href="forms.result" class="nav-link hover-effect"> ফলাফল </a></li>
+               <li class="nav-item ps-3"><a href="admin_login" class="nav-link hover-effect"> অ্যাডমিন </a></li>                      
+           </ul>                    
        </div>   
    </section>
-          <section class="linebreak">
+          <section class="linebreak text-center mt-5" style="background-color: lavender;">
           <div class="linebreak">
           <section class="About" id="About"> 
-            <h2>
+            <h1 class="text-success">
             ফলাফল
-            </h2>
+            </h1>
             
              <form action="{{route('web.search')}}" method="GET" class="AboutCVV">
         
@@ -162,9 +70,10 @@ background-color:lavenderblush;
                 <br>
                   <h3> <label for="">জাতীয় পরিচয়পত্রের নাম্বার লিখুন:</label></h3>
                   <br>
+                  
                    <input type="text"  name="query" placeholder="Search here....." value="{{ request()->input('query') }}" style="width: 180px; height: 30px">
                    <span class="text-danger">@error('query'){{ $message }} @enderror</span>
-                   <button type="submit" class="ss" style="width: 80px; height: 30px">Search</button>
+                   <button type="submit" class="btn btn-info ">Search</button>
                    <br><br>
                 </div>
                 </p>
@@ -183,18 +92,12 @@ background-color:lavenderblush;
              <br>
              <br>
             
-             <br>
-             <br>
-             <br>
-             
-             <br>
-             <br>
-             <br>
+            
              
              <br>
              @if(isset($form))
 
-               <table class="table_table-hover">
+               <table class="table_table-hover ">
                    <thead>
                        <tr>
                        <th>NID</th>
@@ -203,7 +106,7 @@ background-color:lavenderblush;
                        <th>Phone</th>
                        <th>Email</th>
                         <th>Gender</th>
-                         <th>BloodG</th>
+                         <th>BloodGroup</th>
                        <th>Address</th>
                          <!--<th>WardNo</th>
                        <th>Vaccinated</th>
@@ -246,36 +149,61 @@ background-color:lavenderblush;
        
           <br>
              <br>
-           
-             <br>
-             <br>
-             <br>
-           
-             <br>
+           <br> <br>
              <br>
              <br>
              
              <br>
              <br>
              <br>
-             
-             <br>
-             <br>
-             <br>
-             <br>
-             
-             <br>
+            
             
              
 
 
-          <div class="footer">
+          <div class="text-center"  style="background-color: #e3f2fd;">
 
 	
-	        <p class="copyright">&copy; 2021 Surokkha Seba Sylhet<br>
-            All Rights Reserved by Shabib Chowdhury and Samia Rahman Rima</p>
+	        <p class="copyright">&copy; 2023 Surokkha Seba Sylhet<br>
+            All Rights Reserved by Samia Rahman Rima and Tusty Rani Dhar</p>
 
             
         </div>
+
+        <!-- scripts -->
+        <script>
+            const searchFocus = document.getElementById('search-focus');
+const keys = [
+  { keyCode: 'AltLeft', isTriggered: false },
+  { keyCode: 'ControlLeft', isTriggered: false },
+];
+
+window.addEventListener('keydown', (e) => {
+  keys.forEach((obj) => {
+    if (obj.keyCode === e.code) {
+      obj.isTriggered = true;
+    }
+  });
+
+  const shortcutTriggered = keys.filter((obj) => obj.isTriggered).length === keys.length;
+
+  if (shortcutTriggered) {
+    searchFocus.focus();
+  }
+});
+
+window.addEventListener('keyup', (e) => {
+  keys.forEach((obj) => {
+    if (obj.keyCode === e.code) {
+      obj.isTriggered = false;
+    }
+  });
+});
+        </script>
+
+        
+        <script src="https://kit.fontawesome.com/1c202b4ef8.js" crossorigin="anonymous"></script>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

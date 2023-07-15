@@ -19,8 +19,12 @@ a {
   text-decoration: none;
   font-weight: 400;
 }
+h2{
+    padding-top: 50px;
+    /* padding-bottom: 20px; */
+}
 
-h2 {
+h3 {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -70,10 +74,6 @@ h2 {
 
 
 /* TABS */
-h1{
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
 
 h2.inactive {
   color: #cccccc;
@@ -142,6 +142,26 @@ input[type=email] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
 input[type=password] {
   background-color: #f6f6f6;
   border: none;
@@ -167,6 +187,10 @@ input[type=email]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
 input[type=password]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
@@ -175,11 +199,18 @@ input[type=password]:focus {
 input[type=email]:placeholder {
   color: #cccccc;
 }
+input[type=text]:placeholder {
+  color: #cccccc;
+}
 input[type=password]:placeholder {
   color: #cccccc;
 }
 
-
+/* .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+} */
 
 /* ANIMATIONS */
 
@@ -305,6 +336,8 @@ h1{
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     </head>
     <body>
       
@@ -315,22 +348,51 @@ h1{
     <!-- Icon -->
     <div class="fadeIn first">
       <!-- <img src="https://t4.ftcdn.net/jpg/04/37/47/69/360_F_437476995_W4JzNU3EuV7G1fCQodLV2wRcubXzIeke.jpg" id="icon" alt="User Icon" /> -->
-      <h1>সুরক্ষা সেবা সিলেট</h1>
-      <h2>অ্যাডমিন</h2>
+      <h2 >সুরক্ষা সেবা সিলেট</h2><br>
+      <h3>ব্যবহারকারী</h3>
     </div>
-   <!-- action="{{route('auth.register')}}" method="post" -->
-    @if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-@endif
 
     <!-- Login Form -->
-    <form action="{{url('/admin_dashboard')}}" method="post">
+    <!-- <form action="{{url('/admin_dashboard')}}" method="post"> -->
+    <form id="form" action="{{route('auth.register')}}" method="post">
     @csrf
-      <input type="email" id="login" class="fadeIn second" name="email" placeholder="ইমেইল">
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="নাম" value="{{old('name')}}">
+      <div class="text-danger">
+        @error('name')
+
+       {{$message}}
+
+        @enderror
+
+      </div>
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="ইমেইল" value="{{old('email')}}">
+      <div class="text-danger">
+        @error('email')
+
+       {{$message}}
+
+        @enderror
+
+      </div>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="পাসওয়ার্ড">
-      <input type="submit" class="fadeIn fourth" value="প্রবেশ করুন">
+      <div class="text-danger">
+        @error('password')
+
+       {{$message}}
+
+        @enderror
+
+      </div>
+      <input type="password" id="password2" class="fadeIn third" name="password_confirmation" placeholder="পাসওয়ার্ড নিশ্চিত করুন">
+      <div class="text-danger">
+        @error('password_confirmation')
+
+       {{$message}}
+
+        @enderror
+
+      </div>
+      <input type="submit" class="fadeIn fourth" value="নিবন্ধন করুন">
     </form>
 
     <!-- Remind Passowrd -->
@@ -341,5 +403,84 @@ h1{
 
   </div>
 </div>
+
+
+<!-- script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<!-- <script>
+  const form = document.getElementById('form');
+const username = document.getElementById('name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const password2 = document.getElementById('password2');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+
+    if(usernameValue === '') {
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    if(passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+
+    if(password2Value === '') {
+        setError(password2, 'Please confirm your password');
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords doesn't match");
+    } else {
+        setSuccess(password2);
+    }
+
+};
+</script> -->
     </body>
 </html>

@@ -55,18 +55,18 @@ class FormController extends Controller
     {
         
         $this->validate($request,[
-            'NID_no' => 'required',
-            'names' => 'required|max:255',
-            'birthdate' => 'required|date',
-            'phoneN' => 'required|numeric',
-            'mailaddress' => 'required|email|max:255',
-            'BloodG' => 'required|',
-            'sex' => 'required|',
+            'NID' => 'required',
+            'name' => 'required|max:255',
+            'date_of_birth' => 'required|date',
+            'phone' => 'required|numeric',
+            'email' => 'required|email|max:255',
+            'BloodGroup' => 'required|',
+            'gender' => 'required|',
             'address' => 'required|max:255',
-            'Wardno' => 'required|numeric',
-            'veksinate' => 'required',
-            'Vname' => 'required',
-            'priordiagnosis' => 'required',
+            'Ward_no' => 'required|numeric',
+            'vaccinate' => 'required',
+            'vaccine_name' => 'required',
+            'prior_diagnosis' => 'required',
             'status '=>'পরীক্ষার সময়সূচী শীঘ্রই বলা হবে'
             
         ]); 

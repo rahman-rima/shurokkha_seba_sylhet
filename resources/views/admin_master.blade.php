@@ -126,8 +126,8 @@
 
 	<footer>
 
-	<p class="copyright">&copy; 2021 Surokkha Seba Sylhet<br>
-            All Rights Reserved by Shabib Chowdhury and Samia Rahman Rima</p>
+	<p class="copyright">&copy; 2023 Surokkha Seba Sylhet<br>
+            All Rights Reserved by Samia Rahman Rima and Tusty Rani Dhar</p>
 
         </div>
 

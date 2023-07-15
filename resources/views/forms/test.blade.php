@@ -9,12 +9,24 @@
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
 
 	    <title> একটি টেস্ট বুক করুন </title>
+        <style>
+            .hover-effect:hover {
+        background-color: #0275d8;
+        opacity: 1.0;
+      }
+      .name{
+        margin-left: 310px;
+        padding-left: 90px; 
+      }
+        </style>
 
     
-	    <link rel="stylesheet" href="./CSS/style.css">
+	    <!-- <link rel="stylesheet" href="./CSS/style.css">s -->
     </head>
     
     <body>
@@ -24,30 +36,30 @@
             <p>{{ $error }}</p>
         @endforeach
     </div>
-@endif
+    @endif
     @if(session('message'))
      <script>swal("ধন্যবাদ!", "COVID 19 পরীক্ষার নিবন্ধন সফল হয়েছে !!", "success");</script>
 
     @endif
 
-        <section class="header">
+    <section class="navbar navbar-expand-lg mx-3 ps-5 h3 mt-2 " style="background-color: #e3f2fd;">
        
-            <div class="headmenu">
-                
-                <ul>
-                    <li><i class="fa fa-home" aria-hidden="true"></i> <a href="http://127.0.0.1:8000/"> হোম </a></li>
-                    <li><a href="http://127.0.0.1:8000/#About"> সম্পর্কিত </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Symptoms"> উপসর্গ </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Prevention"> প্রতিরোধ </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Doctors"> ডাক্তার </a></li>
-                    <li><a href="http://127.0.0.1:8000/#News"> খবর </a></li>
-                    <li><a href="forms.test"> টেস্ট বুকিং  </a></li>
-                    <li><a href="http://127.0.0.1:8000/#Vaccination"> ভ্যাকসিন </a></li>
-                    <li><a href="forms.result"> ফলাফল </a></li>
-                    <li><a href="admin_login"> অ্যাডমিন </a></li>                      
-                </ul>                    
-            </div>   
-        </section>
+       <div >
+           
+           <ul class="navbar-nav ">
+               <li class="nav-item"><a href="/" class="nav-link hover-effect"><i class="fa fa-home" aria-hidden="true">  হোম</i> </a></li>
+               <li class="nav-item ps-3"><a href="#About" class="nav-link hover-effect"> সম্পর্কিত </a></li>
+               <li class="nav-item ps-3"><a href="#Symptoms" class="nav-link hover-effect"> উপসর্গ </a></li>
+               <li class="nav-item ps-3"><a href="#Prevention" class="nav-link hover-effect"> প্রতিরোধ </a></li>
+               <li class="nav-item ps-3"><a href="#Doctors" class="nav-link hover-effect"> ডাক্তার </a></li>
+               <li class="nav-item ps-3"><a href="#News" class="nav-link hover-effect"> খবর </a></li>
+               <li class="nav-item ps-3"><a href="forms.test" class="nav-link hover-effect"> টেস্ট বুকিং </a></li>
+               <li class="nav-item ps-3"><a href="#Vaccination" class="nav-link hover-effect"> ভ্যাকসিন </a></li>
+               <li class="nav-item ps-3"><a href="forms.result" class="nav-link hover-effect"> ফলাফল </a></li>
+               <li class="nav-item ps-3"><a href="admin_login" class="nav-link hover-effect"> অ্যাডমিন </a></li>                      
+           </ul>                    
+       </div>   
+   </section>
 
         <section class="linebreak">
             <div class="linebreak">
@@ -55,33 +67,33 @@
             </div>
         </section>
 
-        <section class="BookTest">
-            <h1>
+        <section class="BookTest text-center mt-5 border border-info shadow-lg mb- pt-5 " style="background-color: lavender;">
+            <h1 class="text-success">
                 একটি টেস্ট বুক করুন
             </h1>
           
 
             <div class="Testbooking">
     
-                <table>
+                <table class="text-center name">
                     <tr>
                         <td>
                             <form action="{{route('forms.store')}}" method="POST">
                             @csrf
 
-                                <br><b>নাম: </b><input type="text" name="names">
+                                <br><b>নাম: </b><input  type="text" name="name">
                                 &nbsp; &nbsp; &nbsp; <b>জাতীয় পরিচয়পত্রের নাম্বার: </b><input type="text" name="NID_no"><br><br>
-                                <b>জন্মতারিখ: </b><input type="date" name="birthdate">
-                                &nbsp; &nbsp; &nbsp; <b>ফোন নাম্বার: </b><input type="text" name="phoneN">
-                                &nbsp; &nbsp; &nbsp; <b>ইমেইল: </b><input type="email" name="mailaddress"> <br><br>
+                                <b>জন্মতারিখ: </b><input type="date" name="date_of_birth">
+                                &nbsp; &nbsp; &nbsp; <b>ফোন নাম্বার: </b><input type="text" name="phone">
+                                &nbsp; &nbsp; &nbsp; <b>ইমেইল: </b><input type="email" name="email"> <br><br>
 
                                 <b>লিঙ্গ:</b>
-                                <input type="radio" name="sex" value="male">পুরুষ
-                                <input type="radio" name="sex" value="female">মহিলা
-                                <input type="radio" name="sex" value="other">অন্যান্য
+                                <input type="radio" name="gender" value="male">পুরুষ
+                                <input type="radio" name="gender" value="female">মহিলা
+                                <input type="radio" name="gender" value="other">অন্যান্য
 
                                 <b>&nbsp; &nbsp; &nbsp; রক্তের গ্রুপ:</b>
-                                <select name="BloodG">
+                                <select name="blood_group">
                                     <option>A+</option>
                                     <option>A-</option>
                                     <option>B+</option>
@@ -95,7 +107,7 @@
                                 <b>ঠিকানা: </b><input type="text" name="address">
                                 
                                 <b>&nbsp; &nbsp; &nbsp; ওয়ার্ড নং:</b>
-                                    <select name="Wardno">
+                                    <select name="Ward_no">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -126,18 +138,19 @@
                                 </select><br><br>
 
                                 <b>ভ্যাকসিন নিয়েছেন?</b>
-                                <input type="radio" name="veksinate" value="yes">হ্যাঁ
-                                <input type="radio" name="veksinate" value="no">না
+                                <input type="radio" name="vaccinate" value="yes">হ্যাঁ
+                                <input type="radio" name="vaccinate" value="no">না
                                 
                                 <b>&nbsp; &nbsp; &nbsp; ভ্যাকসিনের নাম:</b>
-                                <select name="Vname">
+                                <select name="vaccine_name">
+                                <option>কোনটি না</option>
                                     <option>AstraZeneca</option>
                                     <option>Sinopharm</option>
                                     <option>Pfizer</option>
                                     <option>Moderna</option>
                                     <option>Sputnik V</option>
                                     <option>অন্যান্য</option>
-                                    <option>কোনটি না</option>
+                                    
                                 </select><br><br>
 
                                 <input type="checkbox" name="dosage">১ম ডোজ সম্পন্ন
@@ -146,11 +159,11 @@
                                 <b>&nbsp; &nbsp; &nbsp; তারিখ: </b><input type="date" name="2nddose"><br><br>
 
                                 <b>আগে করোনায় আক্রান্ত হয়েছেন?</b>
-                                <input type="radio" name="priordiagnosis" value="yes">হ্যাঁ
-                                <input type="radio" name="priordiagnosis" value="no">না<br><br>
+                                <input type="radio" name="prior_diagnosis" value="yes">হ্যাঁ
+                                <input type="radio" name="prior_diagnosis" value="no">না<br><br>
                                 
-                                <input type="reset" style="margin-left: 70px; width:120px; height:60px; font-size: 18px; color: green;"value="রিসেট করুন">
-                                <input type="submit" style="margin-left: 20px; width:120px; height:60px; font-size: 18px; color: green;"value="সাবমিট করুন"><br><br>
+                                <input class="btn btn-warning pe-3 me-3" type="reset" style="margin-left: 70px; width:140px; height:60px; font-size: 18px; color: green;"value="রিসেট করুন">
+                                <input class="btn btn-info me-3" type="submit" style="margin-left: 20px; width:140px; height:60px; font-size: 18px; color: green;"value="সাবমিট করুন"><br><br>
                             </form>
                         </td>
                     </tr>
@@ -165,17 +178,21 @@
         
         
         
-        <div class="footer">
+        <div class="footer mt-5 text-center" style="background-color: #e3f2fd;">
 
 	
-	        <p class="copyright">&copy; 2021 Surokkha Seba Sylhet<br>
-            All Rights Reserved by Shabib Chowdhury and Samia Rahman Rima</p>
+	        <p class="copyright">&copy; 2023 Surokkha Seba Sylhet<br>
+            All Rights Reserved by Samia Rahman Rima and Tusty Rani Dhar</p>
         </div>
         
         
         
         
-        
+        <!-- Scripts -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://kit.fontawesome.com/1c202b4ef8.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
         
         
         
@@ -190,4 +207,6 @@
     
     
     
-</html>
+
+    </body>
+    </html>

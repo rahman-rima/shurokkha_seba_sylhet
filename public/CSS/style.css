@@ -16,18 +16,18 @@
     margin-left: 600px;
 }
 
-.header {
+/* .header {
     width: 1346px;
     height: 100px;
      margin: auto;
-}
+} */
 
 
-.headmenu {
+/* .headmenu {
     width: 100%;
     height: 100%;
     
-}
+} */
 
 .headmenu ul{
     margin-top: 20px; 
@@ -228,6 +228,7 @@ background-color:lavenderblush;
     font-size: 40px;
     color: white;
     background-color: steelblue;
+    margin-bottom: 30px;
 }
 .bannertext p{
     width: 43%;

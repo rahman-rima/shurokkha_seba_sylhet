@@ -1,3 +1,8 @@
+
+<!-- <div>
+    <a href="{{url('logout')}}">logout</a>
+</div> -->
+
 <!DOCTYPE html>
 <html>
     <head>

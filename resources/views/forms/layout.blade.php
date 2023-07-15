@@ -55,7 +55,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>সুরক্ষা সেবা সিলেট: অ্যাডমিন প্যানেল</span></a>
+				<a class="brand"><span>সুরক্ষা সেবা সিলেট: অ্যাডমিন প্যানেল</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -127,8 +127,8 @@
 
 	<footer>
 
-	<p class="copyright">&copy; 2021 Surokkha Seba Sylhet<br>
-            All Rights Reserved by Shabib Chowdhury and Samia Rahman Rima</p>
+	<p class="copyright">&copy; 2023 Surokkha Seba Sylhet<br>
+            All Rights Reserved by Samia Rahman Rima and Tusty Rani Dhar</p>
 
         </div>
 
