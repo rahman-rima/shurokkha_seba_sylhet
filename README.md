@@ -48,7 +48,7 @@ The interface is in Bangla.
 
 | Symptoms | Prevention |
 |---|---|
-| ![Symptoms](screenshots/02-home-symptoms.png) | ![Prevention](03-home-prevention.png) |
+| ![Symptoms](02-home-symptoms.png) | ![Prevention](03-home-prevention.png) |
 
 ### Registration and login
 | Register | Login |
@@ -132,6 +132,7 @@ Open http://127.0.0.1:8000 in your browser.
 ## Authors
 
 - **Samia Rahman Rima** – samiarahmanrimaa@gmail.com
+- **Tusty Rani Dhar**
 
 ## Acknowledgements
 
