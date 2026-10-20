@@ -14,11 +14,11 @@ The project was inspired by the Bangladesh government's Surokkha COVID-19 websit
 ## Features
 
 **Guest**
-- Information pages about COVID-19: symptoms, prevention, doctors, news, and vaccine registration
+- Information pages about COVID-19: symptoms, prevention, doctors, news and vaccine registration
 
 **User (patient)**
-- Registration with email verification, login, and forgot-password (reset by email)
-- Test booking form: personal details, NID, blood group, address and ward, vaccination, and previous infection history
+- Registration with email verification, login, and forgot password (reset by email)
+- Test booking form: personal details, NID, blood group, address and ward, vaccination and previous infection history
 - Result lookup by NID
 - Plasma donor list
 - View and edit profile, upload profile image, change password
@@ -66,12 +66,26 @@ The interface is in Bangla.
 
 ![Change password](10-change-password.png)
 
+| Profile | Edit profile |
+|---|---|
+| ![User profile](14-user-profile.png) | ![Edit profile](15-edit-profile.png) |
+
+| Plasma donor list | Result (by NID) |
+|---|---|
+| ![Plasma donors](16-plasma-donor-list.png) | ![Search result](17-search-result.png) |
+
+> All names, emails and numbers shown are dummy test data.
+
 ### Admin
 | Admin login | Dashboard |
 |---|---|
 | ![Admin login](11-admin-login.png) | ![Admin dashboard](12-admin-dashboard.png) |
 
-![Edit appointment](13-admin-edit-appointment.png)
+| Appointments | Edit appointment |
+|---|---|
+| ![Appointments](18-admin-appointments.png) | ![Edit appointment](13-admin-edit-appointment.png) |
+
+![Admin profile](19-admin-profile.png)
 
 ## Getting Started
 
@@ -111,7 +125,7 @@ MAIL_PASSWORD=your_app_password
 Email verification and password reset need working mail settings.
 
 ```bash
-# Create an empty MySQL database with the name above, then:
+# create an empty MySQL database with the name above, then:
 php artisan migrate
 
 npm run dev
@@ -120,7 +134,7 @@ php artisan serve
 
 Open http://127.0.0.1:8000 in your browser.
 
-> Admin accounts are not created through registration. They are set in the database by the database administrator. 
+> Admin accounts are not created through registration. [Explain how you created yours, e.g. a seeder or a direct entry in the admin table. Do not publish real passwords.]
 
 ## Future Work
 
@@ -131,7 +145,7 @@ Open http://127.0.0.1:8000 in your browser.
 
 ## Authors
 
-- **Samia Rahman Rima** – samiarahmanrimaa@gmail.com
+- **Samia Rahman Rima** – rima@metrouni.edu.bd
 - **Tusty Rani Dhar**
 
 ## Acknowledgements
